@@ -86,10 +86,11 @@
             <br><a href="#"><img src = "img/githublogo.png" alt="logo github"></a></p>
             <p>Jeffry KHALIFE
             <br><a href="#"><img src = "img/githublogo.png" alt="logo github"></a></p>
-    </div>
+        </div>
     </footer>
 
 </body>
+
 
 </html>
 <?php
