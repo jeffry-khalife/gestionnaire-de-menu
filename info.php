@@ -1,3 +1,75 @@
+<?php
+session_start();
+require 'config.php';  // Page php qui se connecte à la base de donnée 
+
+// Verifier si l'utilisateur est connecter 
+if (!isset($_SESSION['user_id'])) {
+    die("Accés refusé ! Connexion obligatoire ! ");
+}
+
+$user_id = $_SESSION['user_id'];
+
+// verififer le formulaire
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $nom = $_POST['nom'] ?? ''; 
+    $prenom = $_POST['prenom'] ?? '';      
+    $email = $_POST['email'] ?? '';
+    $mot_de_passe = $_POST['mot_de_passe'];
+    $confirmation_mot_de_passe = $_POST['confirmation_mot_de_passe'];
+
+    if (empty($nom) || empty($prenom) || empty($email)) {
+        echo "Nom, Prenom, and Email sont obligatoire.";
+        exit;
+    }
+
+    // Verfier si les mdp sont identique
+    if (!empty($mot_de_passe) && $mot_de_passe !== $confirmation_mot_de_passe) {
+        echo "Les mots de passes ne corresponde pas";
+        exit;
+    }
+
+    // requete sql pour mettre à jours les informations 
+    $requete = "UPDATE utilisateur SET nom = ?, prenom = ?, email = ?";
+
+    // Hash le nouveau mot de passe et le mettre à jours 
+    if (!empty($mot_de_passe)) {
+        $mot_de_passe_hash = password_hash($mot_de_passe, PASSWORD_BCRYPT);  
+        $requete .= ", mot_de_passe = ?"; 
+    }
+
+    $requete .= " WHERE id = ?";
+
+    // Preparation de la requete pour plus de sécuriter 
+    $sql = $db->prepare($requete);
+
+    // lié les parametres 
+    if (!empty($mot_de_passe)) {
+        // lié le mot de passe et les autres parametres 
+        $sql->bindValue(1, $nom, PDO::PARAM_STR);  
+        $sql->bindValue(2, $prenom, PDO::PARAM_STR);   
+        $sql->bindValue(3, $email, PDO::PARAM_STR);     
+        $sql->bindValue(4, $mot_de_passe_hash, PDO::PARAM_STR);  
+        $sql->bindValue(5, $user_id, PDO::PARAM_INT);    
+    } else {
+        $sql->bindValue(1, $nom, PDO::PARAM_STR);
+        $sql->bindValue(2, $prenom, PDO::PARAM_STR);
+        $sql->bindValue(3, $email, PDO::PARAM_STR);
+        $sql->bindValue(4, $user_id, PDO::PARAM_INT);
+    }
+
+    // Execution de la requete
+    if ($sql->execute()) {
+        echo "Profil mis à jours";
+    } else {
+        echo "Erreur" . implode(" ", $sql->errorInfo());
+    }
+
+    $sql = null;
+}
+
+$db = null;
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -71,79 +143,5 @@
             <br><a href="#"><img src = "img/githublogo.png" alt="logo github"></a></p>
         </div>
     </footer>
-
 </body>
-
-
 </html>
-<?php
-session_start();
-require 'config.php';  // Page php qui se connecte à la base de donnée 
-
-// Verifier si l'utilisateur est connecter 
-if (!isset($_SESSION['user_id'])) {
-    die("Accés refusé ! Connexion obligatoire ! ");
-}
-
-$user_id = $_SESSION['user_id'];
-
-// verififer le formulaire
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $nom = $_POST['nom'] ?? ''; 
-    $prenom = $_POST['prenom'] ?? '';      
-    $email = $_POST['email'] ?? '';
-    $mot_de_passe = $_POST['mot_de_passe'];
-    $confirmation_mot_de_passe = $_POST['confirmation_mot_de_passe'];
-
-    if (empty($nom) || empty($prenom) || empty($email)) {
-        echo "Nom, Prenom, and Email sont obligatoire.";
-        exit;
-    }
-
-    // Verfier si les mdp sont identique
-    if (!empty($mot_de_passe) && $mot_de_passe !== $confirmation_mot_de_passe) {
-        echo "Les mots de passes ne corresponde pas";
-        exit;
-    }
-
-    // requete sql pour mettre à jours les informations 
-    $requete = "UPDATE utilisateur SET nom = ?, prenom = ?, email = ?";
-
-    // Hash le nouveau mot de passe et le mettre à jours 
-    if (!empty($mot_de_passe)) {
-        $mot_de_passe_hash = password_hash($mot_de_passe, PASSWORD_BCRYPT);  
-        $requete .= ", mot_de_passe = ?"; 
-    }
-
-    $requete .= " WHERE id = ?";
-
-    // Preparation de la requete pour plus de sécuriter 
-    $sql = $db->prepare($requete);
-
-    // lié les parametres 
-    if (!empty($mot_de_passe)) {
-        // lié le mot de passe et les autres parametres 
-        $sql->bindValue(1, $nom, PDO::PARAM_STR);  
-        $sql->bindValue(2, $prenom, PDO::PARAM_STR);   
-        $sql->bindValue(3, $email, PDO::PARAM_STR);     
-        $sql->bindValue(4, $mot_de_passe_hash, PDO::PARAM_STR);  
-        $sql->bindValue(5, $user_id, PDO::PARAM_INT);    
-    } else {
-        $sql->bindValue(1, $nom, PDO::PARAM_STR);
-        $sql->bindValue(2, $prenom, PDO::PARAM_STR);
-        $sql->bindValue(3, $email, PDO::PARAM_STR);
-        $sql->bindValue(4, $user_id, PDO::PARAM_INT);
-    }
-
-    // Execution de la requete
-    if ($sql->execute()) {
-        echo "Profil mis à jours";
-    } else {
-        echo "Erreur" . implode(" ", $sql->errorInfo());
-    }
-
-    $sql = null;
-}
-
-$db = null;
-?>
