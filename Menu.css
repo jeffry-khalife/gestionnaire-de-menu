@@ -1,212 +1,773 @@
-/* Styles globaux */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+/* Début de la section Information personnelles */
+.settings-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-container img {
+  width: 30px;
+  height: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.input-group input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  height: 100px;
+}
+
+.save-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #80ed99;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: grey;
+}
+
+/* Fin de la section Information personnelles */
+
+/* Début de la mise en page pour la section mes commandes */
+order-container {
+  background-color: white;
+  width: 90%;
+  max-width: 800px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.order-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+
+.order-item:hover {
+  background-color: #f1f1f1;
+}
+
+
+.order-id {
+  font-weight: bold;
+}
+
+.order-status {
+  font-size: 14px;
+  color: #38a3a5;
+}
+
+.order-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-btn {
+  padding: 8px 15px;
+  background-color: #38a3a5;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Fin de la partie Mes Commandes */
+
+/* Début du Popup */
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+    }
+    .overlay:target {
+  visibility: visible;
+  opacity: 1;
+    }
   
-  :root {
-    --primary-color: #000000;
-    --secondary-color: #38a3a5;
-    --font-size: 16px;
-    --spacing-unit: 1rem;
-    --background-color: #465362;
-    --barre-laterale-color: #38a3a5;
-    --link-hover-color: #007BFF;
-    --footer-link-color: #007BFF;
+    .popup {
+  margin: 20px auto;
+  padding: 100px;
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  border-radius: 5px;
+  width: 80%;
+  position: relative;
+  transition: all 5s ease-in-out;
+    }
+    
+    .popup img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10%;
+    }
+ 
+    .popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+  position: absolute;
+  top: 50px;
+  right: 200px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+    }
+    .popup .close:hover {
+  color: #06D85F;
+    }
+    .popup .contents {
+  max-height: 30%;
+  overflow: auto;
+    }
+ 
+/* Fin du Popup */
+
+
+.admin {
+  background-color: white;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  padding: 20px;
+}
+
+.admin {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.admin h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.admin p {
+  color: #555;
+  font-size: 16px;
+}
+ 
+.contentbox {
+  min-height: 1vh;
+  text-align: center;
+  background-image: url("img/logo.jpg");
+  background-repeat: cover;
+  background-size: 100% 100%;
+  padding: auto;
+  font-family: caveat;
   }
-  
-  @font-face {
-    font-family: 'Alice';
-    src: url('fonts/alice.woff2') format('woff2'),
-         url('fonts/alice.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+
+.contentboxadmin {
+  min-height: 1vh;
+  text-align: center;
+  background-image: url("img/logo.jpg");
+  background-repeat: cover;
+  background-size: 100% 100%;
+  padding: auto;
+  font-family: caveat;
   }
-  
-  body {
-    font-family: 'Alice', serif;
-    font-size: var(--font-size);
-    color: var(--primary-color);
-    background-image: url('img/logo.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+.content {
+  min-height: 1vh;
+  text-align: center;
+  background-image: url("img/logo.jpg");
+  background-repeat: cover;
+  background-size: 100% 100%;
+  padding: auto;
+  font-family: caveat;
   }
-  
-  /* Navigation */
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    background-color: #80ed99;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size: 2rem;
+
+.content h2 {
+ color: black;
+ font-size: 2.5rem;
+ margin: 0;
+ }
+
+.cardbox {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
   }
-  
-  nav a {
-    color: black;
-    text-decoration: none;
-    padding: 12px 20px;
-    margin: 0 10px;
-    transition: background-color 0.3s ease;
+
+
+  /* Top nav bar */
+nav {
+  background-color: rgb(6, 6, 6);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   }
-  
-  nav p {
-    font-size: 2rem;
-    margin: 0;
-    text-align: center;
-    flex-grow: 1;
+
+nav img {
+  height: 45px;
+  width: 45px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  margin: 0 10px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
   }
-  
-  nav img {
-    width: 50px;
-    height: 50px;
-  }
-  
-  nav a.active {
-    background-color: #027731;
+
+  /* Change the background color if it's the actual page */
+ nav a.active {
+ background-color: #027731;
+ color: white;
+ }
+/* Change the background color when the mouse is on it */
+ nav a:hover {
+ background-color: #777;
+ }
+
+
+/* Dropdown Button 0 */
+.dropbtn {
+  background-color: #000000;
+  color: white;
+  padding: 12px;
+  font-size: 10px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #000000;}
+
+
+/* Dropdown Button 1*/
+.dropbtn1 {
+  background-color: #000000;
+  color: white;
+  padding: 12px;
+  font-size: 10px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content1 a {
+  color: white;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content1 a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown1:hover .dropdown-content1 {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown1:hover .dropbtn1 {background-color: #000000;}
+
+/* Dropdown Button 2  */
+.dropbtn2 {
+  background-color: #000000;
+  color: white;
+  padding: 12px;
+  font-size: 10px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown2 {
+  position: relative;
+  display: inline-block;
+}
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content2 a {
+  color: white;
+  padding: 12px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content2 a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown2:hover .dropdown-content2 {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown2:hover .dropbtn2 {background-color: #000000;}
+
+
+/* Début du footer */
+
+footer {
+    background-color: black;
     color: white;
-  }
-  
-  nav a:hover {
-    background-color: #777;
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1rem;
-    font-weight: bold;
-    position: fixed;
-    top: 97px;
-    width: 50px;
-    background-color: var(--barre-laterale-color);
-    height: 100%;
-    overflow: auto;
-  }
-  
-  .sidebar a {
-    display: block;
-    color: black;
-    padding: 16px;
-    text-decoration: none;
-  }
-  
-  .sidebar a.active {
-    background-color: grey;
-    color: white;
-  }
-  
-  .sidebar a:hover:not(.active) {
-    background-color: #555;
-    color: white;
-  }
-  
-  .vertical-rl {
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-  }
-  
-  /* Section Produits */
-  .products-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 200px;
-    padding: 20px;
-    text-align: center;
-    flex-grow: 1;
-  }
-  
-  .products-section h2 {
-    margin-bottom: 20px;
-  }
-  
-  .products-section p {
-    margin-bottom: 20px;
-  }
-  
-  .mosaic {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-  }
-  
-  .product {
-    text-align: center;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product img {
-    width: 100%;
-    max-height: 100px;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-  }
-  
-  .product img:hover {
-    transform: scale(1.1);
-  }
-  
-  .product-info {
-    margin-top: 10px;
-    font-size: 0.9em;
-  }
-  
-  .product-description {
-    font-size: 0.8em;
-    color: #666;
-    margin-top: 5px;
-  }
-  
-  .product-info strong {
-    display: block;
-    margin-top: 5px;
-  }
-  
-  .add-to-cart {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: var(--secondary-color);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-  }
-  
-  .add-to-cart:hover {
-    background-color: #27ae60;
-  }
-  
-  /* Footer */
-  footer {
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    background-color: #80ed99;
-    color: black;
     text-align: center;
     padding: 1% 0;
     width: 100%;
+    clear: both;
+  
     margin-top: auto;
-  }
-  
-  .footer-container {
+    }
+   
+    .Copyright {
     display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
+    align-items: flex-end;
+    }
+   
+    .Copyright img {
+    width:8%;
+    height:8%;
+    }
+
+@media (max-width: 600px) {
+nav {
+    flex-direction: column;
+    padding: 20px;
+}
+
+nav a {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+/* Reduce padding for dropdowns */
+.dropbtn, .dropbtn1, .dropbtn2 {
+    padding: 10px;
+    font-size: 9px;
+}
+
+/* Stack dropdown buttons vertically */
+.dropdown, .dropdown1, .dropdown2 {
+    width: 100%;
+    text-align: center;
+}
+
+/* Dropdown content should display as block  */
+.dropdown-content, .dropdown-content1, .dropdown-content2 {
+    min-width: 100%;
+    display: none;
+}
+
+.dropdown-content a, .dropdown-content1 a, .dropdown-content2 a {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Show dropdowns when clicked */
+.dropdown:hover .dropdown-content, .dropdown1:hover .dropdown-content1, .dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+.footer {
+    padding: 1% 0;
+  }
+
+}
+
+
+@media (min-width: 600px) and (max-width: 1024px) {
+nav {
+    flex-direction: row;
+    padding: 15px;
+}
+
+nav a {
+    font-size: 1rem;
+    padding: 12px 15px;
+}
+
+/* Adjust dropdowns to fit within the available space */
+.dropdown, .dropdown1, .dropdown2 {
+    display: inline-block;
+}
+
+/* Dropdown content display as block on hover */
+.dropdown:hover .dropdown-content, .dropdown1:hover .dropdown-content1, .dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+.footer {
+    padding: 1.5% 0;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
+nav {
+    justify-content: space-evenly;
+}
+
+nav a {
+    font-size: 1.2rem;
+    padding: 12px 25px;
+}
+
+.dropdown-content, .dropdown-content1, .dropdown-content2 {
+    display: none;
+}
+
+.dropdown:hover .dropdown-content, .dropdown1:hover .dropdown-content1, .dropdown2:hover .dropdown-content2 {
+    display: block;
+}
+
+.footer {
+    padding: 2% 0;
+  }
+
+}
+
+
+/* fin du formulaire */ 
+
+@media (min-width: 1200px) {
+  .content h2 {
+    font-size: 3rem;
+  }
+}
+
+
+@media (max-width: 1199px) and (min-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  .content {
+    padding: 30px;
+  }
+
+  .content h2 {
+    font-size: 2rem;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .content {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+
+  .team {
+    justify-content: center;
+}
+
+  .team-member {
+    width: 200px;
+    margin: 15px;
+}
+
+}
+
+.popup {
+  padding: 50px;
+}
+
+.popup img {
+  width: 350px;
+  height: 350px;
+}
+
+.popup h2 {
+  font-size: 1.2rem;
+} 
+
+@media (max-width: 600px) {
+  .content {
+    background-size: cover;
   }
   
+  .form-row {
+    flex-direction: column;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+
+  form input[type=text], form select, form textarea {
+    padding: 8px;
+  }
+
+  form input[type=Valider] {
+    padding: 10px 15px;
+  }
+
+  .settings-container {
+    padding: 20px;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .save-btn {
+    padding: 10px;
+    font-size: 14px;
+
+    body {
+      padding-top: 20px;
+    }
+
+    .order-container {
+      padding: 15px;
+    }
+
+    .order-item {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+
+    .order-info {
+      margin-bottom: 10px;
+    }
+
+    .order-actions {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .action-btn {
+      width: 100%;
+      padding: 10px;
+    }
+
+    .popup img {
+      width: 80px;
+      height: 120px;
+    }
   
+    .popup h2 {
+      font-size: 1rem;
+    }
+  
+    .popup .close {
+      font-size: 24px;
+      top: 10px;
+      right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+  .content {
+    background-size: cover;
+  }
+  
+  .form-row {
+    flex-direction: column;
+  }
+
+  input, textarea {
+    width: 100%;
+  }
+
+  form input[type=text], form select, form textarea {
+    padding: 8px;
+  }
+
+  form input[type=Valider] {
+    padding: 10px 15px;
+  }
+
+  .content h2 {
+    font-size: 1.2rem;
+  }
+
+  .team-member {
+    width: 100%;
+    margin: 15px 0;
+  }
+
+ .team-member img {
+    width: 120px;
+    height: 120px;
+  }
+
+ .team-member h2 {
+    font-size: 18px;
+  }
+
+ .team-member p {
+    font-size: 14px;
+  }
+
+  .popup img {
+    width: 80px;
+    height: 120px;
+  }
+
+  .popup h2 {
+    font-size: 1rem;
+  }
+
+  .popup .close {
+    font-size: 24px;
+    top: 10px;
+    right: 20px;
+  }
+  
+}
+}

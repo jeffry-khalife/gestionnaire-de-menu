@@ -1,144 +1,231 @@
- <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Vente</title>
-    <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="menu.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+
+
+    <title>MENU</title>
 </head>
+
 <body>
-    <?php
-    // Liste des pages pour la navigation
-    $pages = [
-        "index.php" => "Accueil",
-        "ventes.php" => "Vente",
-        "apropos.php" => "A propos",
-        "histoire.php" => "Histoire",
-        "contact.php" => "Contact"
-    ];
 
-    // Liste des produits
-    $products = [
-        [
-            "image" => "image/produit-removebg-preview.png",
-            "title" => "Matcha Pure",
-            "description" => "Un matcha de qualité supérieure, idéal pour une dégustation traditionnelle.",
-            "price" => "20€"
-        ],
-        [
-            "image" => "image/pack-removebg-preview.png",
-            "title" => "Matcha Latte",
-            "description" => "Un mélange savoureux de matcha et de lait crémeux pour un moment de douceur.",
-            "price" => "15€"
-        ],
-        [
-            "image" => "image/box-removebg-preview.png",
-            "title" => "Matcha Ceremonial",
-            "description" => "Le matcha idéal pour les cérémonies traditionnelles japonaises.",
-            "price" => "40€"
-        ],
-        [
-            "image" => "image/théé-removebg-preview.png",
-            "title" => "Matcha Deluxe",
-            "description" => "Un thé matcha riche et velouté pour les amateurs exigeants.",
-            "price" => "15€"
-        ],
-        [
-            "image" => "image/bamboo.jpg",
-            "title" => "Matcha Ice",
-            "description" => "Parfait pour des boissons glacées au thé matcha.",
-            "price" => "10€"
-        ],
-        [
-            "image" => "image/kit-removebg-preview.png",
-            "title" => "Matcha Fusion",
-            "description" => "Un mélange unique de thé matcha et d'épices.",
-            "price" => "35€"
-        ],
-        [
-            "image" => "image/matc-removebg-preview.png",
-            "title" => "Matcha Zen",
-            "description" => "Le thé matcha pour des moments de pure détente.",
-            "price" => "28€"
-        ],
-        [
-            "image" => "image/boite_noir-removebg-preview.png",
-            "title" => "Matcha Gourmet",
-            "description" => "Pour une expérience culinaire inégalée.",
-            "price" => "25€"
-        ],
-        [
-            "image" => "image/canette-removebg-preview.png",
-            "title" => "Matcha Premium",
-            "description" => "Un choix idéal pour une saveur authentique.",
-            "price" => "22€"
-        ]
-    ];
-    ?>
+  <nav>
+    <a href="ventes.html"><img src="img/resto.jpg" alt="logo" width="50" height="50"></a>
+    <a style="font-family:alice">MENU</a>
+    <a href="profil.html"><img src="img/utilisateur.png" alt="logo profile" width="50" height="50"></a>
+  </nav>
 
-    <nav>
-        <a href="ventes.php"><img src="image/panier-removebg-preview.png" alt="logo thé" width="50" height="50"></a>
-        <a href="index.php"><p> MatchaTea </p></a>
-        <a href="profil.php"><img src="image/utilisateur.png" alt="logo profile" width="50" height="50"></a>
-    </nav>
-
-    <div class="sidebar">
-        <?php foreach ($pages as $url => $label): ?>
-            <div class="box vertical-rl">
-                <a href="<?= $url ?>"><?= $label ?></a>
-            </div>
-        <?php endforeach; ?>
-    </div>
-
-    <section class="products-section">
-        <h2>Nos Thés Matcha</h2>
-        <p>
-            Qu'est-ce que c'est ? Le “matcha” (抹茶) soit littéralement “thé moulu” en japonais, est un thé vert réduit en poudre très fine. Un matcha de qualité est reconnaissable à sa couleur vert vif.
-            Composés à 100 % de thé vert matcha et 100 % naturels, nos thés matcha conviennent à la boisson comme à la pâtisserie.
-        </p>
-        <div class="mosaic">
-            <?php foreach ($products as $product): ?>
-                <div class="product">
-                    <img src="<?= $product['image'] ?>" alt="<?= htmlspecialchars($product['title']) ?>" title="<?= htmlspecialchars($product['description']) ?>">
-                    <div class="product-info">
-                        <strong><?= $product['price'] ?></strong>
-                        <div class="product-description"><?= htmlspecialchars($product['description']) ?></div>
-                        <a href="#" class="add-to-cart">Ajouter au panier</a>
-                    </div>
+    <div class="contentbox">
+        <div class="order-container">
+            <h2>Mes Commandes</h2>
+            <ul class="order-list">
+              <!-- Produit -->
+              <li class="order-item">
+                <div class="order-info">
+                  <span class="order-id">Thé matcha du Japon</span>
+                  <span class="order-status">Status: En cours de Livraison</span>
                 </div>
-            <?php endforeach; ?>
+                <div class="order-actions">
+                    <a class="button" href="#popup0"><button class="action-btn">Plus</button></a>
+                  <button class="action-btn">Commander à nouveaux</button>
+                </div>
+              </li>
+              <!-- Produit 2 -->
+              <li class="order-item">
+                <div class="order-info">
+                  <span class="order-id">matcha bio Saemidori 50g</span>
+                  <span class="order-status">Status: Livré</span>
+                </div>
+                <div class="order-actions">
+                    <a class="button" href="#popup1"><button class="action-btn">Plus</button></a>
+                  <button class="action-btn">Commander à nouveaux</button>
+                </div>
+              </li>
+              <!-- Produit 3 -->
+              <li class="order-item">
+                <div class="order-info">
+                  <span class="order-id">Matcha HINATA Legendaire Bio par Takeshi-san</span>
+                  <span class="order-status">Status: Livré</span>
+                </div>
+                <div class="order-actions">
+                    <a class="button" href="#popup2"><button class="action-btn">Plus</button></a>
+                  <button class="action-btn">Commander à nouveaux</button>
+                </div>
+              </li>
+              <li class="order-item">
+                <div class="order-info">
+                  <span class="order-id">matcha de cérémonie samidori bio 30g</span>
+                  <span class="order-status">Status: Livré</span>
+                </div>
+                <div class="order-actions">
+                    <a class="button" href="#popup3"><button class="action-btn">Plus</button></a>
+                  <button class="action-btn">Commander à nouveaux</button>
+                </div>
+              </li>
+              <li class="order-item">
+                <div class="order-info">
+                  <span class="order-id">Coffret matcha</span>
+                  <span class="order-status">Status: Livré</span>
+                </div>
+                <div class="order-actions">
+                    <a class="button" href="#popup4"><button class="action-btn">Plus</button></a>
+                  <button class="action-btn">Commander à nouveaux</button>
+                </div>
+              </li>
+              <li class="order-item">
+                <div class="order-info">
+                  <span class="order-id">matcha bio Saemidori 50g</span>
+                  <span class="order-status">Status: Livré</span>
+                </div>
+                <div class="order-actions">
+                    <a class="button" href="#popup5"><button class="action-btn">Plus</button></a>
+                  <button class="action-btn">Commander à nouveaux</button>
+                </div>
+              </li>
+              <li class="order-item">
+                <div class="order-info">
+                  <span class="order-id">Thé matcha du Japon</span>
+                  <span class="order-status">Status: Livré</span>
+                </div>
+                <div class="order-actions">
+                    <a class="button" href="#popup6"><button class="action-btn">Plus</button></a>
+                  <button class="action-btn">Commander à nouveaux</button>
+                </div>
+              </li>
+              <li class="order-item">
+                <div class="order-info">
+                  <span class="order-id">Thé matcha du Japon</span>
+                  <span class="order-status">Status: Livré</span>
+                </div>
+                <div class="order-actions">
+                    <a class="button" href="#popup7"><button class="action-btn">Plus</button></a>
+                  <button class="action-btn">Commander à nouveaux</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="popup0" class="overlay">
+            <div class="popup">
+                <div class="contact-form">
+                <img src="img/1.jpg" alt="matcha">
+                <a class="close" href="#">&times;</a>
+                <div class="contents">
+                    Le produit phare de Kumiko Matcha, c'est le top du thé matcha premium bio, récolté sur l'île de Kyushu et produit d'un assemblage par le maître de chai. Idéal pour débuter !
+                </div>
+            </div>
+          </div>
         </div>
-    </section>
-
+        <div id="popup1" class="overlay">
+            <div class="popup">
+                <div class="contact-form">
+                <img src="img/2.jpg" alt="matcha">
+                <a class="close" href="#">&times;</a>
+                <div class="contents">
+                  Un mélange savoureux de matcha et de lait crémeux pour un moment de douceur.
+                </div>
+            </div>
+          </div>
+        </div>
+        <div id="popup2" class="overlay">
+            <div class="popup">
+                <div class="contact-form">
+                <img src="img/3.jpg" alt="matcha">
+                <a class="close" href="#">&times;</a>
+                <div class="contents">
+                  Le matcha idéal pour les cérémonies traditionnelles japonaises.
+                </div>
+            </div>
+          </div>
+        </div>
+        <div id="popup3" class="overlay">
+            <div class="popup">
+                <div class="contact-form">
+                <img src="img/4.jpg" alt="matcha">
+                <a class="close" href="#">&times;</a>
+                <div class="contents">
+                  Un thé matcha riche et velouté pour les amateurs exigeants.
+                </div>
+            </div>
+          </div>
+        </div>
+        <div id="popup4" class="overlay">
+            <div class="popup">
+                <div class="contact-form">
+                <img src="img/5.jpg" alt="matcha">
+                <a class="close" href="#">&times;</a>
+                <div class="contents">
+                  Parfait pour des boissons glacées au thé matcha. !
+                </div>
+            </div>
+          </div>
+        </div>
+        <div id="popup5" class="overlay">
+            <div class="popup">
+                <div class="contact-form">
+                <img src="img/6.jpg" alt="matcha">
+                <a class="close" href="#">&times;</a>
+                <div class="contents">
+                  Un mélange unique de thé matcha et d'épices.
+                </div>
+            </div>
+          </div>
+        </div>
+        <div id="popup6" class="overlay">
+            <div class="popup">
+                <div class="contact-form">
+                <img src="img/7.jpg" alt="matcha">
+                <a class="close" href="#">&times;</a>
+                <div class="contents">
+                  Le thé matcha pour des moments de pure détente.                
+                </div>
+            </div>
+          </div>
+        </div>
+        <div id="popup7" class="overlay">
+            <div class="popup">
+                <div class="contact-form">
+                <img src="img/8.jpg" alt="matcha">
+                <a class="close" href="#">&times;</a>
+                <div class="contents">
+                    Le produit phare de Kumiko Matcha, c'est le top du thé matcha premium bio, récolté sur l'île de Kyushu et produit d'un assemblage par le maître de chai. Idéal pour débuter !
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        
+    
+</div>
+<footer>
+  <div class="footer-container">
+    
     <footer>
         <div class="footer-container">
-            <!-- Navigation -->
+            <!-- Navigation --> 
             <div class="footer-nav">
-                <h3>Navigation</h3>
-                <ul>
-                    <?php foreach ($pages as $url => $label): ?>
-                        <li><a href="<?= $url ?>"><?= $label ?></a></li>
-                    <?php endforeach; ?>
-                </ul>
             </div>
-            <!-- Card -->
+            <!-- Carte -->
             <div class="footer-card">
-                <a href="ventes.php"><img src="image/logo matc.jpg" alt="logo vente"></a>
+                <a href="ventes.html"><img src="img/logo.jpg" alt="logo vente"></a>
             </div>
             <!-- Copyright -->
             <div class="footer-copyright">
-                <p>&copy; La plateforme - 2025</p>
-                <p>Magali Vacher</p>
-                <p>Anna Marras</p>
-                <p>Jeffry Khalife</p>
-            </div>
+              <p>&copy; La plateforme - 2025</p>
+              <p>Magali Vacher</p>
+              <p>Anna Marras</p>
+              <p>Jeffry Khalife</p>
+          </div>
         </div>
-    </footer>
-</body>
-</html>
+      </footer>
+      </body> 
+      </html>    
