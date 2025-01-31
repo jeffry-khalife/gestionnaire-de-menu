@@ -8,33 +8,15 @@
 </head>
 
 <body>
-    <nav>
-        <div class="dropdown">
-            <button class="dropbtn1"><a  href="index.html">Home</a></button>
-        </div>
-        <div class="dropdown1">
-            <button class="dropbtn1"><a href="#">A</a></button>
-            <div class="dropdown-content1">
-              <a href="#">A</a>
-              <a href="#">B</a>
-              <a href="#">C</a>
-            </div>
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn"><a class="active" href="#">B</a></button>
-            <div class="dropdown-content">
-              <a href="#">A</a>
-              <a href="#">B</a>
-              <a href="#">C</a>
-              <a href="#">D</a>
-             <a href="#">E</a>
-            </div>
-        </div>
+<nav>
+        <a  href="index.html">Accueil</a>
+        <a href="#">Mes Recettes</a>
+        <a class="active" href="creationrecette.php">Creer Recettes</a>
         <div class="dropdown2">
-            <button class="dropbtn2"><a href="#">C</a></button>
+            <button class="dropbtn2"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/8847/8847419.png" alt="icone profil"></a></button>
             <div class="dropdown-content2">
-              <a href="#">A</a>
-              <a href="#">B</a>
+              <a href="info.php">Parametres</a>
+              <a href="logout.php">Déconnexion</a>
             </div>
         </div>
     </nav>
