@@ -75,7 +75,8 @@ $db = null;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="style2.css">
     <title>Profil</title>
 </head>
@@ -83,10 +84,10 @@ $db = null;
 <body>
 <nav>
         <a  href="index.html">Accueil</a>
-        <a href="#">Mes Recettes</a>
+        <a href="menu.php">Mes Recettes</a>
         <a class="active" href="creationrecette.php">Creer Recettes</a>
         <div class="dropdown2">
-            <button class="dropbtn2"><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/8847/8847419.png" alt="icone profil"></a></button>
+            <button class="dropbtn2"><a href="#"><img src="https://static.vecteezy.com/system/resources/previews/011/947/163/non_2x/gold-user-icon-free-png.png" alt="icone profil"></a></button>
             <div class="dropdown-content2">
               <a href="info.php">Parametres</a>
               <a href="logout.php">Déconnexion</a>
@@ -97,30 +98,30 @@ $db = null;
 
     <div class="content">
       <div class="container">
-        <h2>Profil</h2>
+        <h3>Profil</h3>
         <form action="info.php" method="POST">
           <div class="form-group">
-            <label for="username">Nom</label>
+            <label for="username">Nom :</label>
             <input type="text" id="nom" name="nom" value="">
           </div>
     
           <div class="form-group">
-            <label for="username">Prenom</label>
+            <label for="username">Prenom :</label>
             <input type="text" id="prenom" name="prenom" value="">
           </div>
           
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email">Email :</label>
             <input type="email" id="email" name="email" value="" >
           </div>
     
           <div class="form-group">
-            <label for="mot_de_passe">Nouveau Mot de Passe</label>
+            <label for="mot_de_passe">Nouveau Mot de Passe :</label>
             <input type="password" id="mot_de_passe" name="mot_de_passe" placeholder="">
           </div>
     
           <div class="form-group">
-            <label for="confirmation_mot_de_passe">Confirmer Mot De Passe</label>
+            <label for="confirmation_mot_de_passe">Confirmer Mot De Passe :</label>
             <input type="password" id="confirmation_mot_de_passe" name="confirmation_mot_de_passe" placeholder="">
           </div>
     
@@ -140,7 +141,7 @@ $db = null;
             <p>Anna Maras
             <br><a href="#"><img src = "img/githublogo.png" alt="logo github"></a></p>
             <p>Jeffry KHALIFE
-            <br><a href="#"><img src = "img/githublogo.png" alt="logo github"></a></p>
+            <br><a href="https://github.com/jeffry-khalife"><img src = "img/githublogo.png" alt="logo github"></a></p>
         </div>
     </footer>
 </body>
