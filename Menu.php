@@ -26,7 +26,7 @@
 
     <div class="contentbox">
         <div class="order-container">
-            <h2>Mes Commandes</h2>
+            <h2>Menu du jour</h2>
             <ul class="order-list">
               <!-- Produit -->
               <li class="order-item">
@@ -35,14 +35,14 @@
                 </div>
                 <div class="order-actions">
                     <a class="button" href="#popup0"><button class="action-btn">Plus</button></a>
-                  <button class="action-btn">Commander à nouveaux</button>
+                  <button class="action-btn">Disponible</button>
                 </div>
               </li>
               <!-- Produit 2 -->
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">menu</span>
-                  <span class="order-status">Status: Livré</span>
+                  <span class="order-id">Salade verrte</span>
+                  <span class="order-status">Disponible</span>
                 </div>
                 <div class="order-actions">
                     <a class="button" href="#popup1"><button class="action-btn">Plus</button></a>
@@ -52,8 +52,8 @@
               <!-- Produit 3 -->
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">Entrée </span>
-                  <span class="order-status">Status: Livré</span>
+                  <span class="order-id"> salade césar</span>
+                  <span class="order-status">Disponible</span>
                 </div>
                 <div class="order-actions">
                     <a class="button" href="#popup2"><button class="action-btn">Plus</button></a>
@@ -62,8 +62,8 @@
               </li>
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">Plats</span>
-                  <span class="order-status">Status: Livré</span>
+                  <span class="order-id">Banquette de veau</span>
+                  <span class="order-status">Disponible</span>
                 </div>
                 <div class="order-actions">
                     <a class="button" href="#popup3"><button class="action-btn">Plus</button></a>
@@ -72,7 +72,7 @@
               </li>
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">Dessert</span>
+                  <span class="order-id">Tiramisu</span>
                   <span class="order-status">Status: Livré</span>
                 </div>
                 <div class="order-actions">
