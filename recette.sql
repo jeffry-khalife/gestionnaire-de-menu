@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `ingredient` (
   `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `plat_id` (`plat_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `ingredient`
@@ -109,7 +109,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `utilisateur_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `utilisateur_id` (`utilisateur_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `menu`
@@ -131,11 +131,11 @@ CREATE TABLE IF NOT EXISTS `plat` (
   `nom` varchar(100) NOT NULL,
   `description` text,
   `prix` decimal(10,2) DEFAULT NULL,
-  `categorie` enum('Entrée','Plats','Dessert') CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `categorie` enum('Entrée','Plats','Dessert') CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL,
   `menu_id` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `menu_id` (`menu_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `plat`
@@ -162,14 +162,14 @@ INSERT INTO `plat` (`id`, `nom`, `description`, `prix`, `categorie`, `menu_id`) 
 DROP TABLE IF EXISTS `utilisateur`;
 CREATE TABLE IF NOT EXISTS `utilisateur` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `prenom` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `prenom` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `nom` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `mot_de_passe` varchar(255) NOT NULL,
   `confirmation_mot_de_passe` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `utilisateur`
