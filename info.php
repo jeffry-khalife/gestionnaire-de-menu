@@ -57,13 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql->bindValue(4, $user_id, PDO::PARAM_INT);
     }
 
-    // Execution de la requete
-    if ($sql->execute()) {
-        echo "Profil mis à jours";
-    } else {
-        echo "Erreur" . implode(" ", $sql->errorInfo());
-    }
-
     $sql = null;
 }
 
