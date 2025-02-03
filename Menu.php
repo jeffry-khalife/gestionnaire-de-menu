@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -32,8 +31,7 @@
               <!-- Produit -->
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">Thé matcha du Japon</span>
-                  <span class="order-status">Status: En cours de Livraison</span>
+                  <span class="order-id">Terrine</span>
                 </div>
                 <div class="order-actions">
                     <a class="button" href="#popup0"><button class="action-btn">Plus</button></a>
