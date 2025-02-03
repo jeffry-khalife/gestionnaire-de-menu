@@ -41,7 +41,7 @@
               <!-- Produit 2 -->
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">matcha bio Saemidori 50g</span>
+                  <span class="order-id">menu</span>
                   <span class="order-status">Status: Livré</span>
                 </div>
                 <div class="order-actions">
@@ -52,7 +52,7 @@
               <!-- Produit 3 -->
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">Matcha HINATA Legendaire Bio par Takeshi-san</span>
+                  <span class="order-id">Entrée </span>
                   <span class="order-status">Status: Livré</span>
                 </div>
                 <div class="order-actions">
@@ -62,7 +62,7 @@
               </li>
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">matcha de cérémonie samidori bio 30g</span>
+                  <span class="order-id">Plats</span>
                   <span class="order-status">Status: Livré</span>
                 </div>
                 <div class="order-actions">
@@ -72,7 +72,7 @@
               </li>
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">Coffret matcha</span>
+                  <span class="order-id">Dessert</span>
                   <span class="order-status">Status: Livré</span>
                 </div>
                 <div class="order-actions">
@@ -82,7 +82,7 @@
               </li>
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">matcha bio Saemidori 50g</span>
+                  <span class="order-id">Velouté</span>
                   <span class="order-status">Status: Livré</span>
                 </div>
                 <div class="order-actions">
@@ -92,7 +92,7 @@
               </li>
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">Thé matcha du Japon</span>
+                  <span class="order-id">entrecote</span>
                   <span class="order-status">Status: Livré</span>
                 </div>
                 <div class="order-actions">
@@ -102,7 +102,7 @@
               </li>
               <li class="order-item">
                 <div class="order-info">
-                  <span class="order-id">Thé matcha du Japon</span>
+                  <span class="order-id">tartare de boeuf</span>
                   <span class="order-status">Status: Livré</span>
                 </div>
                 <div class="order-actions">
@@ -118,7 +118,7 @@
                 <img src="img/1.jpg" alt="matcha">
                 <a class="close" href="#">&times;</a>
                 <div class="contents">
-                    Le produit phare de Kumiko Matcha, c'est le top du thé matcha premium bio, récolté sur l'île de Kyushu et produit d'un assemblage par le maître de chai. Idéal pour débuter !
+                    
                 </div>
             </div>
           </div>
@@ -129,7 +129,7 @@
                 <img src="img/2.jpg" alt="matcha">
                 <a class="close" href="#">&times;</a>
                 <div class="contents">
-                  Un mélange savoureux de matcha et de lait crémeux pour un moment de douceur.
+                 
                 </div>
             </div>
           </div>
@@ -140,7 +140,7 @@
                 <img src="img/3.jpg" alt="matcha">
                 <a class="close" href="#">&times;</a>
                 <div class="contents">
-                  Le matcha idéal pour les cérémonies traditionnelles japonaises.
+                 
                 </div>
             </div>
           </div>
@@ -151,7 +151,7 @@
                 <img src="img/4.jpg" alt="matcha">
                 <a class="close" href="#">&times;</a>
                 <div class="contents">
-                  Un thé matcha riche et velouté pour les amateurs exigeants.
+                 
                 </div>
             </div>
           </div>
@@ -162,7 +162,7 @@
                 <img src="img/5.jpg" alt="matcha">
                 <a class="close" href="#">&times;</a>
                 <div class="contents">
-                  Parfait pour des boissons glacées au thé matcha. !
+                 
                 </div>
             </div>
           </div>
@@ -173,7 +173,7 @@
                 <img src="img/6.jpg" alt="matcha">
                 <a class="close" href="#">&times;</a>
                 <div class="contents">
-                  Un mélange unique de thé matcha et d'épices.
+                  
                 </div>
             </div>
           </div>
@@ -184,7 +184,7 @@
                 <img src="img/7.jpg" alt="matcha">
                 <a class="close" href="#">&times;</a>
                 <div class="contents">
-                  Le thé matcha pour des moments de pure détente.                
+                                 
                 </div>
             </div>
           </div>
@@ -195,7 +195,7 @@
                 <img src="img/8.jpg" alt="matcha">
                 <a class="close" href="#">&times;</a>
                 <div class="contents">
-                    Le produit phare de Kumiko Matcha, c'est le top du thé matcha premium bio, récolté sur l'île de Kyushu et produit d'un assemblage par le maître de chai. Idéal pour débuter !
+
                 </div>
             </div>
           </div>
@@ -214,7 +214,7 @@
             </div>
             <!-- Carte -->
             <div class="footer-card">
-                <a href="ventes.html"><img src="img/logo.jpg" alt="logo vente"></a>
+                <a href="Menu.html"><img src="img/logo.jpg" alt="logo Menu"></a>
             </div>
             <!-- Copyright -->
             <div class="footer-copyright">
